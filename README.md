@@ -1,4 +1,4 @@
-﻿![KnockItOut](Content/Images/KnockItOut.Png)
+﻿![KnockItOut](https://raw.githubusercontent.com/hylander0/Iteedee.KnockItOut/master/Iteedee.KnockoutResuableViews/Content/Images/KnockItOut.PNG)
 
 ##ASP.NET MVC & Knockout Model Sharing Tutorial
 
