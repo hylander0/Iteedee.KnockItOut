@@ -1,0 +1,28 @@
+﻿@using Iteedee.KnockoutResuableViews.Views
+@using Iteedee.KnockoutResuableViews.Models
+
+@model Iteedee.KnockoutResuableViews.Models.UserStatsModel
+
+@{
+    ViewBag.Title = "User Stats";
+}
+    <div id="cntrWidgetUserStats" class="well well-lg">
+
+    <h2>@ViewBag.Title<small><a class="glyphicon glyphicon-refresh pull-right" href="#" data-bind="click: refresh"></a></small></h2>
+
+        <ul class="list-group">
+            <li class="list-group-item">
+                <span class="badge alert-info pull-right" data-bind="text: VisitCount"></span>
+                Total Visits
+            </li>
+            <li class="list-group-item">
+                <span class="badge alert-success pull-right" data-bind="text: ConsecutiveDaysVisited"></span>
+                Consecutive Visits
+            </li>
+            <li class="list-group-item">
+                <span class="badge alert-info pull-right" data-bind="text: UserScore"></span>
+                User Score
+            </li>
+        </ul>
+</div>
+    @Html.RenderPartialKnockoutResourceWithScope("UserStats", "Widget", (string)Model.ToJson(), "cntrWidgetUserStats")

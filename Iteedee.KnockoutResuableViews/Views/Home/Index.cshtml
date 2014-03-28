@@ -1,0 +1,23 @@
+﻿@using Iteedee.KnockoutResuableViews.Views
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>Knock It Out!</h1>
+    <p class="lead">A Dry implementation of how to use Knockout and MVC seamlessly</p>
+    @*<small>If you would read more about projects like this:</small>*@
+    <p><a href="http://blog.iteedee.com" class="btn btn-primary btn-large">Learn more &raquo;</a></p>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        @Html.Action("UserStats", "Widget")
+    </div>
+    <div class="col-md-4">
+        @Html.Action("LatestUpdates", "Widget")
+    </div>
+    <div class="col-md-4">
+        @Html.Action("Weather", "Widget")
+    </div>
+</div>

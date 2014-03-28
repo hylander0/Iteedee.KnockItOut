@@ -1,0 +1,24 @@
+﻿@using Iteedee.KnockoutResuableViews.Views
+@using Iteedee.KnockoutResuableViews.Models
+
+@model Iteedee.KnockoutResuableViews.Models.LatestUpdatesModel
+
+@{
+    ViewBag.Title = "Latest Updates";
+}
+<div id="cntrWidgetLatestUpdates" class="well well-lg">
+    <h2>@ViewBag.Title</h2>
+
+    <ul data-bind="foreach: Updates" class="list-group">
+        <li class="list-group-item">
+            <span data-bind="text: $data"></span>
+        </li>
+    </ul>
+    <div class="input-append">
+        <input id="txtUpdate" type="text" placeholder="Update" />
+        <button class="btn btn-primary btn-sm" data-bind="click: AddNew">Add Update</button>
+    </div>
+</div>
+
+@Html.RenderPartialKnockoutResourceWithScope("LatestUpdates", "Widget", (string)Model.ToJson(), "cntrWidgetLatestUpdates")
+

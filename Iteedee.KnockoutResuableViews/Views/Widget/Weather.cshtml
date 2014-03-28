@@ -1,0 +1,28 @@
+﻿@using Iteedee.KnockoutResuableViews.Views
+@using Iteedee.KnockoutResuableViews.Models
+
+@model Iteedee.KnockoutResuableViews.Models.WeatherModel
+
+@{
+    ViewBag.Title = "Weather";
+}
+<div id="cntrWidgetWeather" class="well well-lg">
+    <h2>@ViewBag.Title</h2>
+    <ul class="list-group">
+        <li class="list-group-item">
+            <strong>Tempature</strong>
+            <small data-bind="text: Temp" class="pull-right"></small>
+        </li>
+        <li class="list-group-item">
+            <strong>Conditions</strong>
+            <small data-bind="text: Conditions" class="pull-right"></small>
+        </li>
+        <li class="list-group-item">
+            <strong>Location</strong>
+            <small data-bind="text: CurrentLocation" class="pull-right"></small>
+        </li>
+    </ul>
+
+</div>
+
+@Html.RenderPartialKnockoutResourceWithScope("Weather", "Widget", (string)Model.ToJson(), "cntrWidgetWeather")
