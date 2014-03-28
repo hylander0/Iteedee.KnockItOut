@@ -1,4 +1,4 @@
-﻿![KnockItOut](./Content/Images/KnockItOut.Png)
+﻿![KnockItOut](Content/Images/KnockItOut.Png)
 
 ##ASP.NET MVC & Knockout Model Sharing Tutorial
 
